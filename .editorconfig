@@ -1,0 +1,30 @@
+# top-most EditorConfig file
+root = true
+
+# Global configuration
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 4
+indent_style = tab
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# RCS1090: Call 'ConfigureAwait(false)'.
+dotnet_diagnostic.RCS1090.severity = none
+
+# RCS1194: Implement exception constructors.
+dotnet_diagnostic.RCS1194.severity = none
+
+# CA1032: Implement standard exception constructors
+dotnet_diagnostic.CA1032.severity = none
+
+# space indentation
+[*.{json,yml,yaml,csproj}]
+indent_size = 2
+indent_style = space
+
+# space indentation
+[*.{md}]
+indent_size = 4
+indent_style = space

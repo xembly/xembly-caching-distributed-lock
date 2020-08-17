@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Xembly.Caching.Distributed.Lock</AssemblyName>
+    <RootNamespace>Xembly.Caching.Distributed.Lock</RootNamespace>
+    <IsPackable>true</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="3.1.7" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.7" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="3.1.7" />
+    <PackageReference Include="Polly" Version="7.2.1" />
+  </ItemGroup>
+
+  <!-- NuGet Properties -->
+  <PropertyGroup>
+    <PackageId>Xembly.Caching.Distributed.Lock</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Authors>Alan Roemen, Xembly</Authors>
+    <Description>
+      Xembly Distributed Cache Lock (DCL) is an addon for Microsoft's Distributed Cache library to
+      allow for distributed locking via the IDistributedCache interface.
+    </Description>
+    <Copyright>Copyright (c) 2020 Alan Roemen, Xembly, and contributors.</Copyright>
+    <PackageTags>Xembly IDistributedCache Cache Caching Distributed</PackageTags>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>BSD-3-Clause</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/xembly/xembly-caching-distributed-lock</PackageProjectUrl>
+    <PackageReleaseNotes>See https://github.com/xembly/xembly-caching-distributed-lock/blob/master/CHANGELOG.md for release notes.</PackageReleaseNotes>
+  </PropertyGroup>
+
+</Project>
