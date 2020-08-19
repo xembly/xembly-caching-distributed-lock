@@ -7,6 +7,9 @@ namespace Xembly.Caching.Distributed.Lock
 		public DistributedCacheLockAcquireException()
 		{ }
 
+		public DistributedCacheLockAcquireException(string message) : base(message)
+		{ }
+
 		public DistributedCacheLockAcquireException(string message, Exception innerException) : base(message, innerException)
 		{ }
 	}

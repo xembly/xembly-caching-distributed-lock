@@ -14,6 +14,7 @@ namespace Xembly.Caching.Distributed.Lock
 		private readonly IDistributedCache _cache;
 		private readonly ILogger _logger;
 		private readonly DistributedCacheLockOptions _options;
+		private static readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
 
 		public DistributedCacheLock(IDistributedCache cache, ILogger<DistributedCacheLock> logger, IOptions<DistributedCacheLockOptions> options)
 		{
@@ -39,11 +40,18 @@ namespace Xembly.Caching.Distributed.Lock
 			{
 				var key = _options.KeyPrefix + name;
 				var data = string.Empty;
-				if (!ct.IsCancellationRequested)
-					data = await _cache.GetStringAsync(key);
-				if (!string.IsNullOrEmpty(data)) throw new DistributedCacheLockAcquireException();
-
-				return new InternalDistributedCacheLock(_cache, key, timeoutAfter);
+				try
+				{
+					await _semaphore.WaitAsync(cancellationToken);
+					if (!ct.IsCancellationRequested)
+						data = await _cache.GetStringAsync(key);
+					if (!string.IsNullOrEmpty(data)) throw new DistributedCacheLockAcquireException();
+					return new InternalDistributedCacheLock(_cache, key, timeoutAfter);
+				}
+				finally
+				{
+					_semaphore.Release();
+				}
 			}, cancellationToken);
 
 			if (result.FinalException != null)
