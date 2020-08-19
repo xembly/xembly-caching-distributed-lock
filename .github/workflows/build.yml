@@ -26,7 +26,7 @@ jobs:
         run: dotnet test -c Release
 
   publish:
-    if: startsWith(github.ref, 'refs/heads/release/') || github.ref == 'refs/heads/master'
+    if: (startsWith(github.ref, 'refs/heads/release/') || github.ref == 'refs/heads/master') && !contains(github.event.head_commit.message, '#nopublish')
     needs: [build, test]
     runs-on: ubuntu-latest
     steps:

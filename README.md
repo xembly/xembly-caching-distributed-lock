@@ -64,18 +64,19 @@ Licensed under the terms of the [BSD-3-Clause License](https://opensource.org/li
 
 This application uses Open Source components. You can find the source code of their open source projects along with license information below. We acknowledge and are grateful to these developers for their contributions to open source.
 
-Project: [Microsoft.Extensions.Caching.Abstractions](https://www.nuget.org/packages/Microsoft.Extensions.Caching.Abstractions/)<br>
+
+>Project: [Microsoft.Extensions.Caching.Abstractions](https://www.nuget.org/packages/Microsoft.Extensions.Caching.Abstractions/)<br>
 Copyright © Microsoft Corporation. All rights reserved.<br>
 License [Apache-2.0](https://licenses.nuget.org/Apache-2.0)
 
-Project: [Microsoft.Extensions.Logging.Abstractions](https://www.nuget.org/packages/Microsoft.Extensions.Logging.Abstractions/)<br>
+>Project: [Microsoft.Extensions.Logging.Abstractions](https://www.nuget.org/packages/Microsoft.Extensions.Logging.Abstractions/)<br>
 Copyright © Microsoft Corporation. All rights reserved.<br>
 License [Apache-2.0](https://licenses.nuget.org/Apache-2.0)
 
-Project: [Microsoft.Extensions.Options](https://www.nuget.org/packages/Microsoft.Extensions.Options/)<br>
+>Project: [Microsoft.Extensions.Options](https://www.nuget.org/packages/Microsoft.Extensions.Options/)<br>
 Copyright © Microsoft Corporation. All rights reserved.<br>
 License [Apache-2.0](https://licenses.nuget.org/Apache-2.0)
 
-Project: [Polly](https://www.nuget.org/packages/Polly/)<br>
+>Project: [Polly](https://www.nuget.org/packages/Polly/)<br>
 Copyright © 2020, App vNext<br>
 License [BSD-3-Clause](https://licenses.nuget.org/BSD-3-Clause)
