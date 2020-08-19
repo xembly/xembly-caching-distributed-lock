@@ -1,6 +1,8 @@
 # Xembly Distributed Cache Lock
 
 ![Build Xembly.Caching.Distributed.Lock](https://github.com/xembly/xembly-caching-distributed-lock/workflows/Build%20Xembly.Caching.Distributed.Lock/badge.svg)
+[![codecov](https://codecov.io/gh/xembly/xembly-caching-distributed-lock/branch/master/graph/badge.svg)](https://codecov.io/gh/xembly/xembly-caching-distributed-lock)
+[![NuGet version](https://badge.fury.io/nu/Xembly.Caching.Distributed.Lock.svg)](https://badge.fury.io/nu/Xembly.Caching.Distributed.Lock)
 
 Distributed Cache Lock (DCL) is an addon for Microsoft's Distributed Cache library. DCL utilizies this library
 to create a distributed lock for whatever type of distributed cache system you use with the Distributed Cache
