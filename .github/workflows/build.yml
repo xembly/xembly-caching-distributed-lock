@@ -23,7 +23,14 @@ jobs:
         with:
           dotnet-version: 3.1.301
       - name: Test with dotnet
-        run: dotnet test -c Release
+        run: dotnet test -c Release /p:CollectCoverage=true /p:Threshold=80 /p:ThresholdType=line /p:CoverletOutputFormat=opencover
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          file: ./Xembly.Caching.Distributed.Lock.Tests/coverage.opencover.xml
+          flags: unittests
+          fail_ci_if_error: true
 
   publish:
     if: (startsWith(github.ref, 'refs/heads/release/') || github.ref == 'refs/heads/master') && !contains(github.event.head_commit.message, '#nopublish')

@@ -118,6 +118,9 @@ _TeamCity*
 # DotCover is a Code Coverage Tool
 *.dotCover
 
+# Opencover
+*.opencover.xml
+
 # Visual Studio code coverage results
 *.coverage
 *.coveragexml
