@@ -17,7 +17,7 @@
   <!-- NuGet Properties -->
   <PropertyGroup>
     <PackageId>Xembly.Caching.Distributed.Lock</PackageId>
-    <PackageVersion>1.0.0</PackageVersion>
+    <PackageVersion>1.0.1</PackageVersion>
     <Authors>Alan Roemen, Xembly</Authors>
     <Description>
       Xembly Distributed Cache Lock (DCL) is an addon for Microsoft's Distributed Cache library to
