@@ -1,16 +1,29 @@
-# Xembly Distributed Cache Lock
+# Xembly Caching Distributed Lock
 
-![Build Xembly.Caching.Distributed.Lock](https://github.com/xembly/xembly-caching-distributed-lock/workflows/Build%20Xembly.Caching.Distributed.Lock/badge.svg)
+![Build](https://github.com/xembly/xembly-caching-distributed-lock/workflows/build/badge.svg)
 [![codecov](https://codecov.io/gh/xembly/xembly-caching-distributed-lock/branch/master/graph/badge.svg)](https://codecov.io/gh/xembly/xembly-caching-distributed-lock)
-[![NuGet version](https://badge.fury.io/nu/Xembly.Caching.Distributed.Lock.svg)](https://badge.fury.io/nu/Xembly.Caching.Distributed.Lock)
+[![nuget](https://img.shields.io/nuget/v/Xembly.Caching.Distributed.Lock?color=brightgreen&label=nuget%20stable)](https://www.nuget.org/packages/Xembly.Caching.Distributed.Lock)
+[![nuget](https://img.shields.io/nuget/vpre/Xembly.Caching.Distributed.Lock?color=yellow&label=nuget%20latest)](https://www.nuget.org/packages/Xembly.Caching.Distributed.Lock)
 
-Distributed Cache Lock (DCL) is an addon for Microsoft's Distributed Cache library. DCL utilizies this library
-to create a distributed lock for whatever type of distributed cache system you use with the Distributed Cache
-Library provided by Microsoft.
+Xembly Caching Distributed Lock is an addon for Microsoft's Distributed Cache library
+which creates a distributed lock for your chosen type of distributed cache system
+that implements IDistributedCache.
 
-## Installing via NuGet
+## Installation
 
-    Install-Package Xembly.Caching.Distributed.Lock
+Install the [Xembly.Caching.Distributed.Lock](https://www.nuget.org/packages/Xembly.Caching.Distributed.Lock/)
+
+### .NET Core CLI
+
+```
+Install-Package Xembly.Caching.Distributed.Lock
+```
+
+### Package Manager Console
+
+```
+Install-Package Xembly.Caching.Distributed.Lock
+```
 
 ## Setup
 

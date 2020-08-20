@@ -1,4 +1,4 @@
-name: Build Xembly.Caching.Distributed.Lock
+name: build
 
 on: [push]
 
@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1
         with:
@@ -17,7 +17,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1
         with:
@@ -37,7 +37,19 @@ jobs:
     needs: [build, test]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
+      - name: Get Version
+        id: get_version
+        uses: QwerMike/xpath-action@v1
+        with:
+          filename: ./Xembly.Caching.Distributed.Lock/Xembly.Caching.Distributed.Lock.csproj
+          expression: //PackageVersion[1]/text()[1]
+      - name: Tag Release
+        env:
+          VERSION: ${{ steps.get_version.outputs.result }}
+        run: |
+          git tag $VERSION
+          git push origin $VERSION
       - name: Pack NuGet Packages
         run: dotnet pack -c Release
       - name: Publish NuGet Packages
